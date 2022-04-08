@@ -116,7 +116,7 @@ header .container {
   /* transform: translateX(-100vw); */
   transition: all 1s;
 }
-#nav_input:checked ~ #gnav {
+#gnav.active {
   top: 0;
   /* transform: translateX(0); */
 }
@@ -201,16 +201,16 @@ header .container {
   top: 16px;
 }
 
-#nav_input:checked ~ .hamburger_menu span {
+.hamburger_menu.active span {
   background-color: #FFF;
 }
-#nav_input:checked ~ .hamburger_menu span:nth-of-type(1) {
+.hamburger_menu.active span:nth-of-type(1) {
   transform: translateY(8px) rotate(-45deg);
 }
-#nav_input:checked ~ .hamburger_menu span:nth-of-type(2) {
+.hamburger_menu.active span:nth-of-type(2) {
   display: none;
 }
-#nav_input:checked ~ .hamburger_menu span:nth-of-type(3) {
+.hamburger_menu.active span:nth-of-type(3) {
   transform: translateY(-8px) rotate(45deg);
 }
 

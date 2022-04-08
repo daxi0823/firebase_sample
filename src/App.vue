@@ -1,17 +1,12 @@
 <template>
   <div id="app">
-    <MainComp></MainComp>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MainComp from './components/MainComp.vue'
-
 export default {
   name: 'App',
-  components: {
-    MainComp
-  },
 }
 </script>
 
