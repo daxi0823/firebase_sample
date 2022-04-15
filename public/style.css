@@ -76,6 +76,13 @@ img {
 ul {
   list-style: none;
 }
+button {
+  border: solid 1px #CCC;
+  border-radius: 8px;
+  background-color: #EEE;
+  padding: 0.4em 0.8em;
+  margin: 1em;
+}
 .ttl {
   font-size: 3.2rem;
   text-align: center;
@@ -272,7 +279,7 @@ main {
 }
 #mv {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   /* height: calc(100vh - 86px); */
   background: url(./images/menu10.jpg) no-repeat;
   background-size: cover;
@@ -304,6 +311,9 @@ main {
 }
 .mv__txt {
   font-size: 18px;
+}
+#mv.mv__less {
+  background: none;
 }
 .copy__wrapper {
   background-color: rgba(255, 255, 255, 0.4);

@@ -6,6 +6,8 @@
         <div class="copy__wrapper">
           <h2 class="mv__ttl">Welcome to Cafe Du Ando</h2>
           <p class="mv__txt">大山の天然水で淹れるコーヒーをお楽しみください！</p>
+          <h2 class="mv__ttl">{{ doubleCount }}</h2>
+          <h2 class="mv__ttl">{{ tripleCount }}</h2>
         </div>
       </section><!--mv-->
       <section id="posi">
@@ -190,6 +192,14 @@ export default {
   components: {
     HeaderComp,
     FooterComp
-  }
+  },
+  computed: {
+    doubleCount() {
+      return this.$store.getters.doubleCount
+    },
+    tripleCount() {
+      return this.$store.getters.tripleCount
+    }
+  },
 }
 </script>

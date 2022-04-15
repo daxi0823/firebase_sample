@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="container">
-      <h2 class="logo"><a href="./index.html"><img src="/images/logo.png" alt="Cafe Du Ando" width="800" height="205"></a></h2>
+      <h2 class="logo"><router-link to="/"><img src="/images/logo.png" alt="Cafe Du Ando" width="800" height="205"></router-link></h2>
       <div class="gnav_wrapper">
         <div @click="toggleActive" :class="{active: isActive}" id="menu_btn" class="hamburger_menu">
           <span></span>
@@ -10,9 +10,12 @@
         </div>
         <nav id="gnav" :class="{active: isActive}">
           <ul>
-            <li><router-link to="/" @click="toggleActive">Home</router-link></li>
-            <li><router-link to="/about" @click="toggleActive">About</router-link></li>
-            <li><router-link to="/clock" @click="toggleActive">Clock</router-link></li>
+            <li @click="toggleActive"><router-link to="/">Home</router-link></li>
+            <li @click="toggleActive"><router-link to="/about">About</router-link></li>
+            <li @click="toggleActive"><router-link to="/clock">Clock</router-link></li>
+            <li @click="toggleActive"><router-link to="/webapi">Web API</router-link></li>
+            <li @click="toggleActive"><router-link to="/webapi-img">Random Image</router-link></li>
+            <li @click="toggleActive"><router-link to="/vuex">Vuex</router-link></li>
           </ul>
         </nav>
       </div><!--gnav_wrapper-->

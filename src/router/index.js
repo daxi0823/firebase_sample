@@ -19,6 +19,21 @@ const routes = [
     path: '/clock',
     name: 'Clock',
     component: () => import('../views/Clock.vue')
+  },
+  {
+    path: '/webapi',
+    name: 'WebApi',
+    component: () => import('../views/WebApi.vue')
+  },
+  {
+    path: '/webapi-img',
+    name: 'WebApiImg',
+    component: () => import('../views/WebApiImg.vue')
+  },
+  {
+    path: '/vuex',
+    name: 'VuexComp',
+    component: () => import('../views/VuexComp.vue')
   }
 ]
 
