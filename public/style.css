@@ -142,7 +142,7 @@ header .container {
 #gnav a:hover {
   background-color: #3a1301;
 }
-@media (min-width: 992px) {
+@media (min-width: 4000px) {
   #gnav {
     transition: none;
     transform: none;
@@ -221,7 +221,7 @@ header .container {
   transform: translateY(-8px) rotate(45deg);
 }
 
-@media (min-width: 992px) {
+@media (min-width: 4000px) {
   .hamburger_menu {
     display: none;
   }
@@ -274,7 +274,7 @@ footer .container {
   main contents
 =========================*/
 main {
-  padding-bottom: 400px;
+  /* padding-bottom: 400px; */
   background-color: rgb(253, 249, 243);
 }
 #mv {

@@ -11,11 +11,13 @@
         <nav id="gnav" :class="{active: isActive}">
           <ul>
             <li @click="toggleActive"><router-link to="/">Home</router-link></li>
-            <li @click="toggleActive"><router-link to="/about">About</router-link></li>
             <li @click="toggleActive"><router-link to="/clock">Clock</router-link></li>
             <li @click="toggleActive"><router-link to="/webapi">Web API</router-link></li>
             <li @click="toggleActive"><router-link to="/webapi-img">Random Image</router-link></li>
             <li @click="toggleActive"><router-link to="/vuex">Vuex</router-link></li>
+            <li @click="toggleActive"><router-link to="/dynamic">Dynamic Components</router-link></li>
+            <li @click="toggleActive"><router-link to="/cssanim1">CSS Transition</router-link></li>
+            <li @click="toggleActive"><router-link to="/cssanim2">CSS Animation</router-link></li>
           </ul>
         </nav>
       </div><!--gnav_wrapper-->

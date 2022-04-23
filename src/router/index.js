@@ -11,11 +11,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('../views/About.vue')
-  },
-  {
     path: '/clock',
     name: 'Clock',
     component: () => import('../views/Clock.vue')
@@ -34,6 +29,21 @@ const routes = [
     path: '/vuex',
     name: 'VuexComp',
     component: () => import('../views/VuexComp.vue')
+  },
+  {
+    path: '/dynamic',
+    name: 'DynamicComp',
+    component: () => import('../views/DynamicComp.vue')
+  },
+  {
+    path: '/cssanim1',
+    name: 'CssAnim1',
+    component: () => import('../views/CssAnim1.vue')
+  },
+  {
+    path: '/cssanim2',
+    name: 'CssAnim2',
+    component: () => import('../views/CssAnim2.vue')
   }
 ]
 
