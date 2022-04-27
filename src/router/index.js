@@ -44,6 +44,11 @@ const routes = [
     path: '/cssanim2',
     name: 'CssAnim2',
     component: () => import('../views/CssAnim2.vue')
+  },
+  {
+    path: '/transition',
+    name: 'VueAnim',
+    component: () => import('../views/VueAnim.vue')
   }
 ]
 

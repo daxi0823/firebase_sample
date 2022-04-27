@@ -8,9 +8,11 @@
           <button @click="current = 'CompA' ">CompA</button>
           <button @click="current = 'CompB' ">CompB</button>
           <button @click="current = 'CompC' ">CompC</button>
-          <CompA v-if="current === 'CompA' "></CompA>
-          <CompB v-else-if="current === 'CompB' "></CompB>
-          <CompC v-else></CompC>
+          <transition name="slide" mode="out-in" appear>
+            <CompA v-if="current === 'CompA' "></CompA>
+            <CompB v-else-if="current === 'CompB' "></CompB>
+            <CompC v-else></CompC>
+          </transition>
           <!-- <div v-for="(Comp, index) in Comps" :key="index">
             <component :is="Comps[index].name" />
           </div> -->
@@ -60,5 +62,26 @@ export default {
 .selectedItem {
   text-align: left;
   padding: 2em 4em;
+}
+
+
+
+
+.slide-enter-active{
+  animation: slideIn 1s;
+}
+.slide-leave-active{
+  animation: slideIn 1s reverse;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>
