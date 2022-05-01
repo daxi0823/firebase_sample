@@ -71,7 +71,7 @@ export default {
 .btn__cookie.active {
   animation-delay: 1.6s;
 }
-.btn__cookie:hover, .btn__cookie.visited:hover {
+.btn__cookie:hover, .btn__cookie.active:hover, .btn__cookie.visited:hover {
   opacity: 0.8;
 }
 @keyframes txtAnim {
