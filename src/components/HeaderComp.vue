@@ -11,6 +11,7 @@
         <nav id="gnav" :class="{active: isActive}">
           <ul>
             <li @click="toggleActive"><router-link to="/">Home</router-link></li>
+            <li @click="toggleActive"><router-link to="/setting-menu">管理画面-Mune</router-link></li>
             <li @click="toggleActive"><router-link to="/clock">Clock</router-link></li>
             <li @click="toggleActive"><router-link to="/webapi">Web API</router-link></li>
             <li @click="toggleActive"><router-link to="/webapi-img">Random Image</router-link></li>
