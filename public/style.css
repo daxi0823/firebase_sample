@@ -7,6 +7,10 @@ html {
   scroll-behavior: smooth;
   font-size: 62.5%;/* 1rem = 10px */
 }
+/* Drawer Open時にスクロール止めoverflow: scroll; */
+html.active {
+  overflow: hidden;
+}
 
 /* スマホ大 or 横向き〜 */
 @media (min-width: 576px) {
@@ -125,6 +129,8 @@ header .container {
 }
 #gnav.active {
   top: 0;
+  overflow: scroll;
+  height: 100vh;
   /* transform: translateX(0); */
 }
 #gnav ul {

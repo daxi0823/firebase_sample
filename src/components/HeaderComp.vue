@@ -11,7 +11,7 @@
         <nav id="gnav" :class="{active: isActive}">
           <ul>
             <li @click="toggleActive"><router-link to="/">Home</router-link></li>
-            <li @click="toggleActive"><router-link to="/setting-menu">管理画面-Mune</router-link></li>
+            <li @click="toggleActive"><router-link to="/setting-menu">管理画面-Menu</router-link></li>
             <li @click="toggleActive"><router-link to="/clock">Clock</router-link></li>
             <li @click="toggleActive"><router-link to="/webapi">Web API</router-link></li>
             <li @click="toggleActive"><router-link to="/webapi-img">Random Image</router-link></li>
@@ -28,6 +28,8 @@
 </template>
 
 <script>
+const h = document.querySelector('html');
+
 export default {
   data() {
     return {
@@ -37,11 +39,21 @@ export default {
   mounted() {
     window.addEventListener('resize', () => {
       this.isActive = false;
+      if(this.isActive === true) {
+        h.classList.add('active');
+      } else {
+        h.classList.remove('active');
+      }
     })
   },
   methods: {
     toggleActive() {
       this.isActive = !this.isActive;
+      if(this.isActive === true) {
+        h.classList.add('active');
+      } else {
+        h.classList.remove('active');
+      }
     }
   }
 }

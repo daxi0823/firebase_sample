@@ -54,7 +54,7 @@ const routes = [
     path: '/setting-menu',
     name: 'SettingMenu',
     component: () => import('../views/SettingMenu.vue')
-  }
+  },
 
 ]
 
