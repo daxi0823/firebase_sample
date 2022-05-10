@@ -8,6 +8,7 @@
           <span></span>
           <span></span>
         </div>
+
         <nav id="gnav" :class="{active: isActive}">
           <ul>
             <li @click="toggleActive"><router-link to="/">Home</router-link></li>

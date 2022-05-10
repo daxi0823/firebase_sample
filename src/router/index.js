@@ -57,8 +57,8 @@ const routes = [
   },
   {
     path: '/stop-watch',
-    name: 'stopWatch',
-    component: () => import('../views/stopWatch.vue')
+    name: 'StopWatch',
+    component: () => import('../views/StopWatch.vue')
   },
 
 ]

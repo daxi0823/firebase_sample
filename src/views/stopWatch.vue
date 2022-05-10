@@ -126,11 +126,6 @@ export default {
         if(this.interval == 30000) {
           clearInterval(this.timer);
         }
-        // if(this.interval == 10000) {
-        //   var sec10 = document.querySelector('.sec10');
-        //   window.console.log(sec10);
-        //   sec10.classList.add('active');
-        // }
       }, 10);
     },
     stopTimer() {
