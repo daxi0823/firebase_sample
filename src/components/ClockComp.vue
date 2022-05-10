@@ -51,7 +51,7 @@ export default {
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap'); */
 .time__dsp {
   font-size: 80px;
   font-family: 'Nova Mono', monospace;

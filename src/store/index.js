@@ -52,7 +52,7 @@ export default new Vuex.Store({
     updateTime({commit}) {
       setInterval(() => {
         commit('updateTime');
-      }, 1000)
+      }, 100)
     }
   },
   modules: {

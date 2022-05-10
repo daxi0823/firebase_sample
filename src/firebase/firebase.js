@@ -8,12 +8,12 @@ import { getStorage } from 'firebase/storage'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  projectId: "",
-  storageBucket: "",
-  messagingSenderId: "",
-  appId: ""
+  apiKey: "AIzaSyBdlZRe3z1lhoE3qLZZM8BMZ1f0DG0x4Tk",
+  authDomain: "cafe-du-ando2.firebaseapp.com",
+  projectId: "cafe-du-ando2",
+  storageBucket: "cafe-du-ando2.appspot.com",
+  messagingSenderId: "508706446883",
+  appId: "1:508706446883:web:d4ee6f6cb562b216d61b96"
 };
 
 // Initialize Firebase

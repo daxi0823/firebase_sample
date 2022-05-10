@@ -55,6 +55,11 @@ const routes = [
     name: 'SettingMenu',
     component: () => import('../views/SettingMenu.vue')
   },
+  {
+    path: '/stop-watch',
+    name: 'stopWatch',
+    component: () => import('../views/stopWatch.vue')
+  },
 
 ]
 

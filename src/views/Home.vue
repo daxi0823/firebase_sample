@@ -5,7 +5,7 @@
       <section id="mv">
         <div class="copy__wrapper">
           <h2 class="mv__ttl">Welcome to Cafe Du Ando</h2>
-          <h2 class="mv__ttl">{{ time }}</h2>
+          <h2 class="mv__ttl mv__ttl__clock">{{ time }}</h2>
           <p class="mv__txt">大山の天然水で淹れるコーヒーをお楽しみください！</p>
           <h2 class="mv__ttl">{{ doubleCount }}</h2>
           <h2 class="mv__ttl">{{ tripleCount }}</h2>
@@ -210,3 +210,8 @@ export default {
   }
 }
 </script>
+<style scoped>
+.mv__ttl__clock {
+  font-family: 'Nova Mono', monospace;
+}
+</style>
