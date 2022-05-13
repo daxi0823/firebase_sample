@@ -15,6 +15,7 @@
           <ul class="registered__menus">
             <li v-for="(menu, index) in menus" :key="index">
               <h3 v-if="menu.menuName" class="mv__ttl mv__ttl__menu">{{ menu.menuName }}</h3>
+              <!-- v-if 一部のみあげた時に、エラーにならないように -->
               <p v-if="menu.menuImgUrl"><img :src="menu.menuImgUrl" alt=""></p>
               <p v-if="menu.menuTxt">{{ menu.menuTxt }}</p>
               <button @click="removeMenu(menu.menuId, menu.menuImgFile)">データ削除</button>
@@ -50,6 +51,7 @@ export default {
     HeaderComp,
   },
   mounted(){
+    // mountedなので、立ち上げるたびにサーバーを読み込む
     //firestore内のデータの変化を受け取り、描画用データmenusに反映
     const q = query(collection(db, 'menus'), orderBy('menuId'))
     onSnapshot(q, snapshot => {
@@ -87,12 +89,14 @@ export default {
         menuImgUrl: this.menuImgUrl,
         menuImgFile: this.menuImgFile,
       })
+      // .then 非同期？
       .then((doc) => {
         console.log(`データ追加に成功しました（${doc.id}）`);
         //追加に成功したら入力データを空にする
         this.menuName = '';
         this.menuTxt = '';
         this.file = '';
+        // ファイルの名前が消えないので、下で消している
         const menuImgUrlRemain = document.getElementById('fileImg');
         menuImgUrlRemain.value = '';
       })
@@ -136,6 +140,7 @@ export default {
         .then((downloadURL) => {
           //firestoreにURLとファイル名を保存するため
           this.menuImgUrl = downloadURL;
+          // ストレージから削除する時に使っている
           this.menuImgFile = this.file.name;
           console.log('Success!', downloadURL);
         })
