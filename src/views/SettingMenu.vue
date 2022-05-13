@@ -1,5 +1,6 @@
 <template>
   <div id="main__wrapper">
+    <!-- 安堂先生リファクタリング後 -->
     <HeaderComp></HeaderComp>
     <main>
       <section id="mv" class="mv__less">
