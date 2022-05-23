@@ -12,13 +12,21 @@ export default new Vuex.Store({
   //算出プロパティに相当するもの
   getters: {
     // count: state => state.count,
+
+    // stateのデータの加工
+    // 
     doubleCount: state => state.count * 2,
     tripleCount: state => state.count * 3,
     time: state => state.time
   },
   //メソッドに相当するもの
   mutations: {
+    // stateの更新は、全てmutationsでおこなっている
+    // "="となっているのは、すべてmutationsに書く
+    // gettersでは書かない
+
     increment(state, number) {
+      // number:payload(新しい引数) stateを更新するための引数
       state.count += number
     },
     decrement(state, number) {
@@ -43,9 +51,12 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    // 正確で長い書き方
     increment(context, number) {
       context.commit('increment', number);
+      // mutationのincre
     },
+    // こちらで良い
     decrement({commit}, number) {
       commit('decrement', number);
     },

@@ -28,6 +28,7 @@ export default {
   computed: {
     doubleCount() {
       return this.$store.getters.doubleCount
+      // gettersのdoubleCountを
     },
     tripleCount() {
       return this.$store.getters.tripleCount
@@ -46,6 +47,8 @@ export default {
     // },
     increment() {
       this.$store.dispatch('increment', 1)
+      // 1 が、storeのactionsに渡される
+      // これは、インプットのバリューなど、変数で受けることも可能
     },
     decrement() {
       this.$store.dispatch('decrement', 1)
